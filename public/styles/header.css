@@ -14,7 +14,7 @@ header {
 }
 
 header h2 {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color:#FFF;
   margin-top: -20px;
