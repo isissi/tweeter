@@ -4,7 +4,7 @@
   justify-content: center;
   margin: 50px;
   font-family: "Source Sans Pro", sans-serif;
-  font-family: "Bungee", cursive;
+  font-weight: 600;
 }
 
 #tweet-text {
@@ -33,4 +33,9 @@ textarea {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  font-family: "Bungee", cursive;
+}
+
+.chara-red {
+  color: red;
 }
