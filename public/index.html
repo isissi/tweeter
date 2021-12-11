@@ -59,13 +59,39 @@
     <main class="container">
       <section class="new-tweet">
         <form action="/tweets" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="button-group">
             <button type="submit" class="btn-sbmt">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+
+      <section class="tweets">
+        <div class="tweet-header">
+          <div>
+            <i class="fas fa-user-astronaut fa-2x"></i>
+            <span id="name">Newton</span>
+            </div>
+          <span id="user-name">@Sirlsaac</span>
+        </div>
+
+        <article id="tweet">
+          If I have seen further it is by standing on the shoulders of giants. 
+        </article>
+
+
+        <div class="tweet-footer">
+          <hr class="solid">
+          <div class="date-icon-group">
+          <span id="date">10 days ago</span>
+            <div>
+              <i class="fas fa-flag fa-xs icons"></i>
+              <i class="fas fa-retweet fa-xs icons"></i>
+              <i class="fas fa-heart fa-xs icons"></i>
+            </div>
+        </div>
+        </div>
       </section>
     </main>
   </body>
