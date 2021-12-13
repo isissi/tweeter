@@ -61,18 +61,24 @@ textarea {
 
 .tweet-header {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.tweet-heade-group {
+  display: flex;
   align-items: center;
 }
 
-#name {
-  margin-bottom: 5px;
+.fa-user-astronaut {
+  margin-right: 20px;
 }
 
 #user-name {
   font-weight: 600;
   color:lightgrey;
+  justify-content: flex-end;
 }
 
 
