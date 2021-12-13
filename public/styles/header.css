@@ -1,4 +1,4 @@
-header {
+header.main-header {
   background: url('../images/cubes.png');
   z-index: -1;
   display: flex;
@@ -13,13 +13,13 @@ header {
   margin-top: 170px;
 }
 
-header h2 {
+header.main-header h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color:#FFF;
   margin-top: -20px;
 }
 
-header h2 b {
+header.main-header h2 b {
   font-weight: 600;
 }

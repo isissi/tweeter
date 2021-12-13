@@ -43,7 +43,7 @@ textarea {
 
 /* Tweets style */
 
-.tweets {
+article {
   border: 3px solid #707070;
   width: 800px;
   height: 200px;
@@ -55,11 +55,11 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.tweets:hover {
+article:hover {
   box-shadow: 5px 5px #cdc6e3;
 }
 
-.tweet-header {
+header.tweet-header {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -88,7 +88,7 @@ textarea {
   font-weight: 600;;
 }
 
-hr.solid {
+hr {
   border: 2px solid #707070;
 }
 
