@@ -30,6 +30,10 @@ textarea {
   height: 35px;
 }
 
+.btn-sbmt:active {
+  transform: scale(0.98);
+}
+
 .button-group {
   margin-top: 20px;
   display: flex;
