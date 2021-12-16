@@ -61,6 +61,8 @@ const creatTweetElement = function (tweetData) {
   return html;
 }
 
+
+// Generate create time
 const createdDate = function (tweetData) {
   const today = new Date();
   const date = new Date(parseInt(tweetData.created_at));
@@ -104,11 +106,32 @@ const renderTweets = function (tweets) {
     const newTweet = creatTweetElement(tweet);
     const container = $('#tweets-container');
 
-    container.append(newTweet);
+    container.prepend(newTweet);
   }
 }
 
 
 $(document).ready(function () {
+  //Render past tweets
   renderTweets(data);
+
+  //Add an Event Listener and Prevent the Default Behaviour
+  $("form").submit(function (event) {
+    event.preventDefault();
+
+    const form = $(this);
+
+    $.ajax({
+      type: "POST",
+      url:"/tweets", 
+      data: form.serialize()
+    }).then(() => {
+      return $.ajax('/tweets/', { method: 'GET' });
+    }).then((res) => {
+
+      renderTweets(res);
+      form[0].reset();
+      form.find(".counter").text(140);
+    });
+})
 });
