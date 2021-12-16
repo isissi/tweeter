@@ -75,7 +75,9 @@ header.tweet-header {
   align-items: center;
 }
 
-.fa-user-astronaut {
+#tweet-avatar {
+  width: 50px;
+  height: auto;
   margin-right: 20px;
 }
 
@@ -84,7 +86,6 @@ header.tweet-header {
   color:lightgrey;
   justify-content: flex-end;
 }
-
 
 #tweet {
   display: flex;
@@ -108,10 +109,4 @@ hr {
 
 .icons:hover {
   color:#c0a222;
-}
-
-#tweet-avatar {
-  width: 50px;
-  height: auto;
-  margin-right: 20px;
 }
