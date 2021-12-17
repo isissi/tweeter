@@ -62,6 +62,7 @@
     <!-- Tweet Generator -->
     <main class="container">
       <section class="new-tweet">
+        
         <form action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="button-group">
@@ -70,23 +71,6 @@
           </div>
         </form>
 
-        <div class="error empty-sbmt" hidden>
-          <h3>Error</h3>
-          <hr>
-          <div class="error-message-group">
-            <i class="far fa-dizzy"></i>
-            <p>Sorry, you can't publish a empty tweet. </p>
-          </div>
-        </div>
-
-        <div class="error exceed-sbmt" hidden>
-          <h3>Error</h3>
-          <hr>
-          <div class="error-message-group">
-            <i class="far fa-dizzy"></i>
-            <p>Sorry, the tweet you are trying to publish exceeds maximum character limit. </p>
-          </div>
-        </div>
       </section>
 
       <!-- Posted Tweets -->
