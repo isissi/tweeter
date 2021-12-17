@@ -22,9 +22,28 @@ nav {
   font-size: 30px;
 }
 
+#nav-btn {
+  background-color: transparent;
+  border: 0 transparent;
+  margin-top: -15px;
+}
+
 .fa-angle-double-down {
   color: red;
-  margin-top: -18px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animation keyframes */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 .nav-group {
