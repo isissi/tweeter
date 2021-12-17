@@ -65,6 +65,12 @@ loadTweets();
 
 
 $(document).ready(function () {
+  //Hide/show the form when click the nav bar arrows
+  $("#nav-btn").click(function () {
+    $("form").slideToggle("slow");
+  });
+    
+
   //Add an Event Listener and Prevent the Default Behaviour
   $("form").submit(function (event) {
     event.preventDefault();
