@@ -49,40 +49,38 @@ textarea {
 /* Error box style */
 .error {
   width: 800px;
-  height: auto;
+  height: 60px;
   background-color: aliceblue;
-  margin: 20px 0 20px 0;
-}
-
-.error h3 {
-  font-family: "Bungee", cursive;
-  font-size: 25px;
-  margin-left: 20px;
-}
-
-.error hr {
-  border: 1px solid #707070;
-  margin: -20px 20px 0 20px;
-}
-
-.error-message-group {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 20px 10px 20px;
-}
-
-.error-message-group p {
-  width: 600px;
-  height: auto;
+  justify-content: center;
+  align-items: center; */
+  margin: -30px auto 20px auto;
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
 }
 
 .fa-dizzy {
-  font-size: 2em;;
+  margin-top: 5px;
+}
+
+.error p {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin: -1px 0 5px 0;
+}
+
+.error b {
+  font-weight: 600;
+}
+
+.empty-sbmt {
+  display: none;
+}
+
+.exceed-sbmt {
+  display: none;
 }
 
 /* Tweets style */
@@ -90,7 +88,7 @@ textarea {
 article {
   border: 3px solid #707070;
   width: 800px;
-  height: 200px;
+  height: auto;
   padding: 10px 20px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -128,9 +126,11 @@ header.tweet-header {
 }
 
 #tweet {
-  display: flex;
-  align-items: center;
-  font-weight: 600;;
+  word-wrap: break-word;
+  flex-wrap: wrap;
+  height: auto;  
+  font-weight: 600;
+  
 }
 
 hr {
