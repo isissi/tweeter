@@ -2,6 +2,7 @@
 .new-tweet {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin: 50px;
   font-family: "Source Sans Pro", sans-serif;
@@ -41,8 +42,47 @@ textarea {
   font-family: "Bungee", cursive;
 }
 
-.gitchara-red {
+.chara-red {
   color: red;
+}
+
+/* Error box style */
+.error {
+  width: 800px;
+  height: auto;
+  background-color: aliceblue;
+  margin: 20px 0 20px 0;
+}
+
+.error h3 {
+  font-family: "Bungee", cursive;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.error hr {
+  border: 1px solid #707070;
+  margin: -20px 20px 0 20px;
+}
+
+.error-message-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 20px 10px 20px;
+}
+
+.error-message-group p {
+  width: 600px;
+  height: auto;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+.fa-dizzy {
+  font-size: 2em;;
 }
 
 /* Tweets style */
