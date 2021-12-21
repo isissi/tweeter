@@ -12,7 +12,7 @@ const escape = function (str) {
 };
 
 const creatTweetElement = function (tweetData) {
-  const safeTweet = `<p id="tweet">${escape(tweetData.content.text)}</p>`
+  const safeTweet = `<p id="tweet">${escape(tweetData.content.text)}</p>`;
   const html = `
   <article> 
     <header class="tweet-header">
@@ -40,85 +40,103 @@ const creatTweetElement = function (tweetData) {
   `;
 
   return html;
-}
-
+};
 
 //Loop through all tweets and append to index.html
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     const newTweet = creatTweetElement(tweet);
-    const container = $('#tweets-container');
+    const container = $("#tweets-container");
 
     container.prepend(newTweet);
   }
-}
+};
 
 //responsible for fetching tweets from the http://localhost:8080/tweets page
 const loadTweets = function () {
-  $.ajax('/tweets', { method: 'GET' })
-  .then((res) => {
+  $.ajax("/tweets", { method: "GET" }).then((res) => {
     renderTweets(res);
   });
-}
+};
 
 loadTweets();
 
-
 $(document).ready(function () {
+  //Show back-to-top button when scroll
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      $("nav").slideUp("slow", function () {
+        $("#to-top").show();
+      });
+    } else {
+      $("nav").slideDown("slow", function () {
+        $("#to-top").hide();
+      });
+    }
+  });
+
+  //Back to top when the button is clicked
+  //1 second of animation time
+  //html works for FFX but not Chrome
+  //body works for Chrome but not FFX
+  $("#to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "1000");
+    $("form").slideDown("slow");
+    $("textarea").focus();
+  });
+
   //Hide/show the form when click the nav bar arrows
   $("#nav-btn").click(function () {
     $("form").slideToggle("slow");
+    $("textarea").focus();
   });
-    
 
   //Add an Event Listener and Prevent the Default Behaviour
   $("form").submit(function (event) {
     event.preventDefault();
 
     //When submit slide up all errors and remove the error element
-    $('.error').slideUp("slow", () => {
-      $('.error').remove();
+    $(".error").slideUp("slow", () => {
+      $(".error").remove();
     });
 
     const form = $(this);
     const input = form.find("#tweet-text").val();
-    
+
     //Add error message
     if (!input) {
       $(".new-tweet").prepend(
         `<div class="error empty-sbmt">
           <i class="far fa-dizzy"></i>
           <p><b>Error: </b>Sorry, you can't publish a empty tweet. </p>
-        </div>`);
+        </div>`
+      );
       $(".empty-sbmt").slideDown("slow");
-     
     } else if (input.length > 140) {
       $(".new-tweet").prepend(
         `<div class="error exceed-sbmt">
           <i class="far fa-dizzy"></i>
           <p><b>Error: </b>Sorry, the tweet you are trying to publish exceeds maximum character limit. </p>
-        </div>`);
+        </div>`
+      );
       $(".exceed-sbmt").slideDown("slow");
     } else {
-
       $.ajax({
         type: "POST",
         url: "tweets",
         data: form.serialize(),
       })
 
-      .then(() => {
-        return $.ajax('/tweets', { method: 'GET' });
+        .then(() => {
+          return $.ajax("/tweets", { method: "GET" });
         })
 
-      .then((res) => {
-        //Reset form input and counter
-        renderTweets(res);
-        form[0].reset();
-        form.find(".counter").text(140);
-      })
+        .then((res) => {
+          //Reset form input and counter
+          renderTweets(res);
+          form[0].reset();
+          form.find(".counter").text(140);
+        });
     }
-
-  })
+  });
 });
-
