@@ -34,12 +34,16 @@
     <!-- timeago Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" type="text/javascript"></script>
 
+    <!-- Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
+    <span class="logo">tweeter</span>
+
     <nav>
-      <span class="logo">tweeter</span>
       <div class="nav-group">
         <p class="slogan"><b>write</b> a new tweet</p>
         <button id="nav-btn">
@@ -80,6 +84,10 @@
       <section id="tweets-container">
         <!-- Add tweets from database -->
       </section>
+
+      <button id="to-top">
+        <i class="fas fa-chevron-circle-up"></i>
+      </button>
     </main>
   </body>
 </html>
