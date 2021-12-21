@@ -62,7 +62,7 @@ const loadTweets = function () {
 loadTweets();
 
 $(document).ready(function () {
-  //Show back-to-top button when scroll
+  //Show back-to-top button when the 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
       $("nav").slideUp("slow", function () {
