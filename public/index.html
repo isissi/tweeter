@@ -37,6 +37,8 @@
     <!-- Disable viewport zooming -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
+    <!-- Responsive style -->
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 1024px)">
   </head>
 
   <body>
@@ -53,6 +55,7 @@
     </nav>
 
     <!-- Header -->
+    <div class="content">
     <header class="main-header">
       <div>
           <img src="/images/profile-hex.png" class="avatar"> 
@@ -84,10 +87,11 @@
       <section id="tweets-container">
         <!-- Add tweets from database -->
       </section>
-
       <button id="to-top">
         <i class="fas fa-chevron-circle-up"></i>
       </button>
     </main>
+  </div>
+
   </body>
 </html>
