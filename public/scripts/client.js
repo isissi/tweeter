@@ -108,7 +108,7 @@ $(document).ready(function () {
       $(".new-tweet").prepend(
         `<div class="error empty-sbmt">
           <i class="far fa-dizzy"></i>
-          <p><b>Error: </b>Sorry, you can't publish a empty tweet. </p>
+          <p><b>Error: </b>Sorry, you can't publish an empty tweet. </p>
         </div>`
       );
       $(".empty-sbmt").slideDown("slow");
