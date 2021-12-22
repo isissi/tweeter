@@ -96,9 +96,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     //When submit slide up all errors and remove the error element
-    $(".error").slideUp("slow", () => {
-      $(".error").remove();
-    });
+    $(".error").remove().slideUp("slow");
 
     const form = $(this);
     const input = form.find("#tweet-text").val();
