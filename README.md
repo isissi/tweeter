@@ -26,6 +26,7 @@ https://github.com/isissi/tweeter/blob/master/screenshots/tablet-layout.png?raw=
 
 3. Mobile layout
 https://github.com/isissi/tweeter/blob/master/screenshots/mobile-layout.png?raw=true
+https://github.com/isissi/tweeter/blob/master/screenshots/mobile-layout.png
 
 ## How Tweeter works
 1. Write a tweet by typing into the input box and click "tweet", the tweet will pop up at the top of all the tweets. 
