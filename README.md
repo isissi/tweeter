@@ -19,13 +19,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 1. Desktop layout
-(https://github.com/isissi/tweeter/blob/master/screenshots/desktop-layout.png?raw=true)
+![desktop](https://github.com/isissi/tweeter/blob/master/screenshots/desktop-layout.png?raw=true)
 
 2. Tablet layout
-(https://github.com/isissi/tweeter/blob/master/screenshots/tablet-layout.png?raw=true)
+![tablet](https://github.com/isissi/tweeter/blob/master/screenshots/tablet-layout.png?raw=true)
 
 3. Mobile layout
-(https://github.com/isissi/tweeter/blob/master/screenshots/mobile-layout.png?raw=true)
+![mobile](https://github.com/isissi/tweeter/blob/master/screenshots/mobile-layout.png?raw=true)
 
 
 ## How Tweeter works
