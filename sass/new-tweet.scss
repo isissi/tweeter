@@ -1,3 +1,8 @@
+$primary-color: #4056A1;
+$border-color: #707070;
+$text: "Source Sans Pro", sans-serif;
+$title:'Bungee', cursive;
+
 /* Input box style */
 .new-tweet {
   display: flex;
@@ -5,17 +10,20 @@
   flex-direction: column;
   justify-content: center;
   margin: 50px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $text;
   font-weight: 600;
 }
 
 #tweet-text {
+ 
   width: 100%;
-  font-family: "Source Sans Pro", sans-serif;
+
+  font-family: $text;
   font-weight: 600;
+  
   height: auto;
   border-width: 0;
-  border-bottom: 3px solid #707070;
+  border-bottom: 3px solid $border-color;
   background-color: transparent;
 }
 
@@ -25,7 +33,7 @@ form {
 }
 
 .btn-sbmt {
-  background-color: #4056A1;
+  background-color: $primary-color;
   color: #FFF;
   border: 0;
   font-size: 20px;
@@ -41,7 +49,7 @@ form {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", cursive;
+  font-family: $title;
 }
 
 .chara-red {
@@ -52,6 +60,7 @@ form {
 .error {
   width: 90%;
   max-width: 900px;
+
   height: 60px;
   background-color: aliceblue;
   margin: -30px auto 20px auto;
@@ -64,7 +73,7 @@ form {
 
 .error p {
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $text;
   font-weight: 300;
   font-size: 17px;
   margin: -1px 0 5px 0;
@@ -83,17 +92,20 @@ form {
 }
 
 /* Tweets style */
+
 article {
-  border: 3px solid #707070;
+  border: 3px solid $border-color;
+
   width: 80%;
   max-width: 900px;
+
   height: auto;
   padding: 10px 20px 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 50px auto 50px auto;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $text;
 }
 
 article:hover {
@@ -120,19 +132,20 @@ header.tweet-header {
 
 #user-name {
   font-weight: 600;
-  color: lightgrey;
+  color:lightgrey;
   justify-content: flex-end;
 }
 
 #tweet {
   word-wrap: break-word;
   flex-wrap: wrap;
-  height: auto;
+  height: auto;  
   font-weight: 600;
+  
 }
 
 hr {
-  border: 2px solid #707070;
+  border: 2px solid $border-color;
 }
 
 .date-icon-group {
@@ -146,5 +159,5 @@ hr {
 }
 
 .icons:hover {
-  color: #c0a222;
+  color:#c0a222;
 }

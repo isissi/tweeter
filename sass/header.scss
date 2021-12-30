@@ -1,5 +1,7 @@
+$text: "Source Sans Pro", sans-serif;
+
 header.main-header {
-  background: url("../images/cubes.png");
+  background: url('../images/cubes.png');
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -14,9 +16,9 @@ header.main-header {
 }
 
 header.main-header h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $text;
   font-weight: 300;
-  color: #FFF;
+  color:#FFF;
   margin-top: -20px;
 }
 

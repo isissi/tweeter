@@ -3,10 +3,13 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+$primary-color: #4056A1;
+$arrow-up: #6171a3;
+$background-color: #f4f1ec;
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,33 +17,35 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: $background-color;
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
-  width: 90%;
-  margin: auto;
-  background-color: #f4f1ec;
-}
 
-#to-top {
+ main {
+   width: 90%;
+   margin: auto;
+   background-color: $background-color;
+ }
+
+ #to-top {
   background-color: transparent;
   border: 0 transparent;
-  color: #4056A1;
+  color: $primary-color;
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 5%; 
   font-size: 3em;
   display: none;
   cursor: pointer;
 }
 
 #to-top:hover {
-  color: #6171a3;
+  color: $arrow-up;
 }
