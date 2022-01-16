@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     remaining.text(140 - inputLength);
 
-    if (inputLength >= 140) {
+    if (inputLength > 140) {
       remaining.addClass("chara-red");
     } else {
       remaining.removeClass("chara-red");
