@@ -61,6 +61,13 @@ const loadTweets = function () {
 
 loadTweets();
 
+const loadLastTweet = function () {
+  $.ajax("/tweets", { method: "GET" }).then((res) => {
+    console.log(res);
+    renderTweets([res[res.length - 1]]);
+  });
+};
+
 $(document).ready(function () {
   //Show back-to-top button when the 
   $(window).scroll(function () {
@@ -125,16 +132,13 @@ $(document).ready(function () {
         data: form.serialize(),
       })
 
-        .then(() => {
-          return $.ajax("/tweets", { method: "GET" });
-        })
-
-        .then((res) => {
-          //Reset form input and counter
-          renderTweets(allTweets[allTweets.length - 1]);
-          form[0].reset();
-          form.find(".counter").text(140);
-        });
+      .then(() => {
+        loadLastTweet(); 
+        form[0].reset();
+        form.find(".counter").text(140);
+      })
     }
   });
 });
+
+
