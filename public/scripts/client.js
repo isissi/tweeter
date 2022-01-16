@@ -131,7 +131,7 @@ $(document).ready(function () {
 
         .then((res) => {
           //Reset form input and counter
-          renderTweets(res);
+          renderTweets(allTweets[allTweets.length - 1]);
           form[0].reset();
           form.find(".counter").text(140);
         });
